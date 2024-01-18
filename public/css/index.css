@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+*,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-color: #1f2125;
+}
+body a {
+  text-decoration: none;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body p,
+body li,
+body a {
+  color: #ffffff;
+}
+body i {
+  color: #fb5500;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px #27292d solid;
+  padding: 30px;
+}
+header .logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+header .logo i {
+  font-size: 28px;
+}
+header .logo h1 {
+  font-size: 28px;
+}
+header .search-new {
+  display: flex;
+  gap: 20px;
+}
+header .search-new form {
+  background-color: #27292d;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  min-width: 300px;
+}
+header .search-new form i {
+  color: rgba(255, 255, 255, 0.3137254902);
+  font-size: 20px;
+}
+header .search-new form input {
+  border: none;
+  outline: none;
+  background: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+header .search-new .new {
+  display: flex;
+  background-color: #fb5500;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+header .search-new .new i {
+  color: #ffffff;
+  font-size: 20px;
+}
+header .search-new .new p {
+  font-weight: 700;
+}
+
+main {
+  padding: 30px;
+}
+main ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+main ul li {
+  flex-basis: 300px;
+}
+main ul li a {
+  background-color: #27292d;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+}
+main ul li a i {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+main ul li a h2 {
+  font-size: 16px;
+}
+main ul li a p {
+  font-size: 14px;
+}
+
+.projectpopup {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.projectpopup form {
+  background-color: #27292d;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.projectpopup form input {
+  background-color: #1f2125;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.projectpopup form div {
+  align-self: flex-end;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.projectpopup form div p {
+  cursor: pointer;
+}
+.projectpopup form div button {
+  background-color: #fb5500;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+}/*# sourceMappingURL=index.css.map */

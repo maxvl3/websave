@@ -1,0 +1,43 @@
+<header>
+  <a href="/" class="logo">
+    <i class="fa-solid fa-floppy-disk"></i>
+    <h1>websave</h1>
+  </a>
+  <div class="search-new">
+    <form action="">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="Search here..." />
+    </form>
+    <div class="new" id="newProjectBtn">
+      <i class="fa-solid fa-plus"></i>
+      <p>New project</p>
+    </di>
+  </div>
+</header>
+
+<main>
+  <h1>{{project.title}}</h1>
+  <ul>
+    {{#each project.zipFiles}}
+      <li>
+        <a href="/download/{{this.fileId}}" download="{{this.name}}">
+          <i class="fa-solid fa-file-archive"></i>
+          <h2>{{this.name}}</h2>
+          <!-- You can display additional information about the zip file if needed -->
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</main>
+
+
+<div id="zipUploadPopup" class="zipuploadpopup">
+    <form action="/project/{{project._id}}/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="zipFile" required />
+      <input type="text" name="zipName" placeholder="Zip Name" required />
+      <div>
+        <p>Cancel</p>
+        <button type="submit">Upload</button>
+      </div>
+    </form>
+</div>
