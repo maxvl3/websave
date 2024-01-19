@@ -87,19 +87,21 @@ header .search-new .new p {
   font-weight: 700;
 }
 
-main {
+#home {
   padding: 30px;
 }
-main ul {
+#home ul {
   list-style: none;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
-main ul li {
+#home ul li {
   flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
 }
-main ul li a {
+#home ul li a {
   background-color: #27292d;
   padding: 30px;
   display: flex;
@@ -107,14 +109,14 @@ main ul li a {
   gap: 5px;
   border-radius: 10px;
 }
-main ul li a i {
+#home ul li a i {
   font-size: 36px;
   margin-bottom: 5px;
 }
-main ul li a h2 {
+#home ul li a h2 {
   font-size: 16px;
 }
-main ul li a p {
+#home ul li a p {
   font-size: 14px;
 }
 
@@ -131,7 +133,7 @@ main ul li a p {
   background-color: #27292d;
   padding: 30px;
   border-radius: 10px;
-  width: 400px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -159,6 +161,107 @@ main ul li a p {
   cursor: pointer;
 }
 .projectpopup form div button {
+  background-color: #fb5500;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#bestanden {
+  padding: 30px;
+}
+#bestanden h1 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+#bestanden ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+#bestanden ul li {
+  background-color: #27292d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin-bottom: 15px;
+  max-width: 600px;
+  border-radius: 10px;
+}
+#bestanden ul li div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#bestanden ul li div i {
+  font-size: 24px;
+}
+#bestanden ul li a {
+  color: #fb5500;
+  font-weight: bold;
+}
+
+.zipuploadpopup {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.zipuploadpopup form {
+  background-color: #27292d;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.zipuploadpopup form input {
+  background-color: #1f2125;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.zipuploadpopup form input::file-selector-button {
+  background-color: transparent;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  outline: none;
+  color: #ffffff;
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  opacity: 0.5;
+  font-family: "Quicksand", sans-serif;
+}
+.zipuploadpopup form div {
+  align-self: flex-end;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.zipuploadpopup form div p {
+  cursor: pointer;
+}
+.zipuploadpopup form div button {
   background-color: #fb5500;
   padding: 12px 15px;
   border-radius: 10px;

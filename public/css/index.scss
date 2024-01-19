@@ -106,7 +106,7 @@ header {
   }
 }
 
-main {
+#home {
   padding: 30px;
   ul {
     list-style: none;
@@ -116,6 +116,8 @@ main {
 
     li {
       flex-basis: 300px;
+      display: flex;
+      flex-direction: column;
       a {
         background-color: $lightdark;
         padding: 30px;
@@ -142,7 +144,7 @@ main {
 }
 
 .projectpopup {
-display: none;
+  display: none;
   background-color: #00000080;
   position: fixed;
   left: 0;
@@ -150,11 +152,11 @@ display: none;
   top: 0;
   bottom: 0;
 
-  form{
+  form {
     background-color: $lightdark;
     padding: 30px;
     border-radius: 10px;
-    width: 400px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -163,37 +165,150 @@ display: none;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    input{
-        background-color: $dark;
+    input {
+      background-color: $dark;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      color: $white;
+      font-size: 16px;
+    }
+
+    div {
+      align-self: flex-end;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      p {
+        cursor: pointer;
+      }
+
+      button {
+        background-color: $orange;
         padding: 12px 15px;
         border-radius: 10px;
         border: none;
         outline: none;
         color: $white;
+        font-weight: 700;
+        cursor: pointer;
         font-size: 16px;
+      }
     }
+  }
+}
 
-    div{
-        align-self: flex-end;
+#bestanden {
+  padding: 30px;
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      background-color: $lightdark;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      margin-bottom: 15px;
+      max-width: 600px;
+      border-radius: 10px;
+
+      div {
         display: flex;
         gap: 10px;
         align-items: center;
 
-        p{
-            cursor: pointer;
+        i {
+          font-size: 24px;
         }
+      }
 
-        button{
-            background-color: $orange;
-            padding: 12px 15px;
-            border-radius: 10px;
-            border: none;
-            outline: none;
-            color: $white;
-            font-weight: 700;
-            cursor: pointer;
-            font-size: 16px;
-        }
+      a {
+        color: $orange;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.zipuploadpopup {
+  display: none;
+  background-color: #00000080;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  form {
+    background-color: $lightdark;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    input {
+      background-color: $dark;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      color: $white;
+      font-size: 16px;
+    }
+
+    input::file-selector-button {
+      background-color: transparent;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 2px solid $white;
+      outline: none;
+      color: $white;
+      font-weight: 300;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      opacity: 0.5;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    div {
+      align-self: flex-end;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      p {
+        cursor: pointer;
+      }
+
+      button {
+        background-color: $orange;
+        padding: 12px 15px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        color: $white;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 16px;
+      }
     }
   }
 }

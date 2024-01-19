@@ -8,36 +8,49 @@
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" id="searchInput" placeholder="Search here..." />
     </form>
-    <div class="new" id="newProjectBtn">
+    <div class="new" id="newFileBtn">
       <i class="fa-solid fa-plus"></i>
-      <p>New project</p>
-    </di>
+      <p>New file</p>
+    </div>
   </div>
 </header>
 
-<main>
+<main id="bestanden">
   <h1>{{project.title}}</h1>
   <ul>
     {{#each project.zipFiles}}
-      <li>
-        <a href="/download/{{this.fileId}}" download="{{this.name}}">
-          <i class="fa-solid fa-file-archive"></i>
-          <h2>{{this.name}}</h2>
-          <!-- You can display additional information about the zip file if needed -->
-        </a>
+      <li class="searchable-item">
+        <div>
+          <i class="fa-solid fa-file"></i>
+          <p>{{this.name}}</p>
+        </div>
+        <a
+          href="/download/{{this.fileId}}"
+          download="{{this.name}}"
+        >Download</a>
+
       </li>
     {{/each}}
   </ul>
 </main>
 
-
 <div id="zipUploadPopup" class="zipuploadpopup">
-    <form action="/project/{{project._id}}/upload" method="post" enctype="multipart/form-data">
-      <input type="file" name="zipFile" required />
-      <input type="text" name="zipName" placeholder="Zip Name" required />
-      <div>
-        <p>Cancel</p>
-        <button type="submit">Upload</button>
-      </div>
-    </form>
+  <form
+    action="/project/{{project._id}}/upload"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    <input
+      id=""
+      type="text"
+      name="zipName"
+      placeholder="File description"
+      required
+    />
+    <input type="file" name="zipFile" required />
+    <div>
+      <p id="cancelbutton">Cancel</p>
+      <button type="submit">Upload</button>
+    </div>
+  </form>
 </div>

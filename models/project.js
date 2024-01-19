@@ -1,20 +1,3 @@
-// // project.model.js
-
-// const mongoose = require("mongoose");
-
-// const projectSchema = new mongoose.Schema({
-//   title: { type: String, required: true },
-//   zipFiles: [
-//     {
-//       name: { type: String, required: true },
-//       path: { type: String, required: true },
-//       // You may add more fields as needed, e.g., date, description, etc.
-//     },
-//   ],
-// });
-
-// module.exports = mongoose.model("Project", projectSchema);
-
 const mongoose = require("mongoose");
 
 const fileSchema = new mongoose.Schema({

@@ -15,14 +15,14 @@
   </div>
 </header>
 
-<main>
+<main id="home">
   <ul>
     {{#each projects}}
-      <li>
+      <li class="searchable-item">
         <a href="/project/{{this._id}}">
           <i class="fa-solid fa-folder"></i>
           <h2>{{this.title}}</h2>
-          <p>5 versions</p>
+          <p>{{this.fileCount}} versions</p>
         </a>
       </li>
     {{/each}}

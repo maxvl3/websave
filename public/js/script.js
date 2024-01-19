@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   newProjectBtn.addEventListener("click", function () {
     projectPopup.style.display = "block";
 
-    // Voeg autocomplete="off" toe aan het inputveld in de projectpopup
     const projectInput = document.getElementById("titel");
     projectInput.setAttribute("autocomplete", "off");
   });
@@ -15,4 +14,37 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     projectPopup.style.display = "none";
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const newFileBtn = document.getElementById("newFileBtn");
+  const zipUploadPopup = document.getElementById("zipUploadPopup");
+  const cancelbutton = document.getElementById("cancelbutton");
+
+  newFileBtn.addEventListener("click", function () {
+    zipUploadPopup.style.display = "block";
+
+    const projectdescripton = document.getElementById("description");
+    projectdescripton.setAttribute("autocomplete", "off");
+  });
+
+  cancelbutton.addEventListener("click", function (e) {
+    e.preventDefault();
+    zipUploadPopup.style.display = "none";
+  });
+});
+
+function filterResults(searchTerm) {
+  const items = document.querySelectorAll(".searchable-item");
+
+  items.forEach((item) => {
+    const text = item.textContent.toLowerCase();
+    const isVisible = text.includes(searchTerm.toLowerCase());
+    item.style.display = isVisible ? "flex" : "none";
+  });
+}
+
+document.getElementById("searchInput").addEventListener("input", function () {
+  const searchTerm = this.value.trim();
+  filterResults(searchTerm);
 });
